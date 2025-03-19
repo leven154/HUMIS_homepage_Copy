@@ -1,5 +1,4 @@
 div#container {
-    border: 1px solid red;
     min-height: 500px;
     /*width: 500px;*/
     margin: 0 auto 0 auto;
@@ -9,9 +8,6 @@ div#container {
     /* * every item */
 
     > * {
-        border: 1px dotted blue;
-        margin: 5px;
-
         > img {
             width: 100%;
         }
@@ -22,6 +18,9 @@ div#container {
 
         div.nav {
             text-align: right;
+            padding-right: 15px;
+            font-size: 12px;
+
 
             a {
                 color: black;
@@ -43,6 +42,8 @@ div#container {
             }
 
             &.bottom-nav {
+                margin-bottom: 5px;
+                font-size: 10px;
                 a {
                     text-transform: lowercase;
                 }
@@ -50,32 +51,31 @@ div#container {
         }
 
         div.brown-box {
-            background-color: rosybrown;
+            background-color: #bec4a1;
             border-radius: 15px;
             margin: 15px 10px 70px;
             padding: 20px;
             min-height: 500px;
-
+            position: relative;
 
 
             nav {
                 float: left;
-                width: 30%;
-            }
+                width: 20%;
 
-            a {
-                display: block;
-                color: black;
-                text-transform: uppercase;
-                text-decoration: none;
-                margin: 5px;
-                border-bottom: 1px solid black;
-                padding: 10px 0 10px 10px;
-                font-size: 14px;
+                a {
+                    display: block;
+                    color: black;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    margin: 5px;
+                    border-bottom: 1px solid black;
+                    padding: 10px 0 10px 10px;
+                    font-size: 14px;
 
-
-                &:hover {
-                    background-color: mistyrose;
+                    &:hover {
+                        background-color: mistyrose;
+                    }
                 }
 
             }
@@ -84,7 +84,12 @@ div#container {
                 float: right;
                 background-color: white;
                 padding: 10px;
-                width: 60%;
+                width: 75%;
+
+
+                > img {
+                    width: 100%;
+                }
 
                 a {
                     color: black;
@@ -95,49 +100,59 @@ div#container {
 
 
                 h2 {
-                    color:red;
+                    color: red;
                     border-bottom: 2px dotted red;
                     text-transform: uppercase;
                     text-align: left;
                     font-weight: normal;
 
-                    }
+                }
 
                 p {
                     font-size: 16px;
 
+                    span {
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
 
-                        span {
-                            font-weight: bold;
-                            font-size: 18px
-                        }
-
-
-                        &.learn-more {
+                    &.learn-more {
                         text-align: right;
 
-                            a {
-                                color: red;
-                                text-decoration: none;
+                        a {
+                            color: red;
+                            text-decoration: none;
 
                             &:hover {
                                 text-decoration: underline;
                             }
-
                         }
                     }
                 }
+            }
 
+            div.clear-float {
+                clear: both;
+            }
+
+            div.login {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                img {
+                    display: block;
+                    margin-top: 10px;
+                }
             }
         }
-
     }
 
     footer {
-        background-color: darkolivegreen;
+        background-color: #404e29;
         color: white;
         font-size: 10px;
         text-align: center;
         padding: 8px;
+        /*margin: 5px;*/
     }
 }
